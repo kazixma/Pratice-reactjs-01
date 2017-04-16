@@ -12,10 +12,13 @@ var config = {
         publicPath: "/app/"
 
     },
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     module: {
         loaders: [
             {
-                test: /\.js>/,
+                test: /\.jsx$|\.es6$|\.js$/,
                 include: SRC_DIR,
                 loader: "babel-loader",
                 query:{
